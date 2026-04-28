@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOEIC Speaking Q1–2 · Vocabulary Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:        #F7F5F0;
+    --surface:   #FFFFFF;
+    --border:    #E4E0D8;
+    --text-primary:   #1C1A17;
+    --text-secondary: #6B6660;
+    --text-muted:     #A09B95;
+    --accent:    #2D2925;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+    --shadow-md: 0 4px 16px rgba(0,0,0,.08), 0 1px 4px rgba(0,0,0,.04);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* ── PAGE LAYOUT ── */
+  .page-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    margin-bottom: 40px;
+  }
+  .header-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+  }
+  .header-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 1.5px;
+    background: var(--text-muted);
+  }
+  .header-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--text-primary);
+    letter-spacing: -.02em;
+    margin-bottom: 10px;
+  }
+  .header-title em {
+    font-style: italic;
+    color: #8B7355;
+  }
+  .header-sub {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 300;
+    max-width: 520px;
+  }
+  .header-divider {
+    margin-top: 28px;
+    height: 1px;
+    background: linear-gradient(to right, var(--border), transparent);
+  }
+
+  /* ── TABS ── */
+  .tab-nav {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 32px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 5px;
+    width: fit-content;
+    box-shadow: var(--shadow-sm);
+  }
+  .tab-btn {
+    padding: 9px 22px;
+    border-radius: 11px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all .2s ease;
+    white-space: nowrap;
+    position: relative;
+  }
+  .tab-btn:hover {
+    color: var(--text-primary);
+    background: var(--bg);
+  }
+  .tab-btn.active {
+    background: var(--accent);
+    color: #FFFFFF;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,.18);
+  }
+
+  /* ── SECTION ── */
+  .section { display: none; }
+  .section.active {
+    display: block;
+    animation: fadeIn .25s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── CATEGORY CARD ── */
+  .category-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 22px 24px 24px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow .2s;
+  }
+  .category-card:hover {
+    box-shadow: var(--shadow-md);
+  }
+  .category-card.functional {
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius-md);
+    padding: 18px 20px 20px;
+    margin-bottom: 12px;
+  }
+
+  /* ── CATEGORY HEADER ── */
+  .cat-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .cat-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .cat-dot.square {
+    border-radius: 3px;
+  }
+  .cat-title {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -.01em;
+  }
+  .cat-badge {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10.5px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 99px;
+    letter-spacing: .02em;
+    border: 1px solid transparent;
+    margin-left: auto;
+  }
+
+  /* ── SUB LABEL (for functional phrases) ── */
+  .sub-label {
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+
+  /* ── PILL GRID ── */
+  .pill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .pill {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12.5px;
+    font-weight: 400;
+    padding: 5px 13px;
+    border-radius: 99px;
+    border: 1px solid transparent;
+    line-height: 1.4;
+    transition: transform .15s, box-shadow .15s;
+    cursor: pointer;
+  }
+  .pill:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,0,0,.1);
+  }
+
+  /* ── NOTE ── */
+  .section-note {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 6px;
+    padding: 10px 14px;
+    background: var(--bg);
+    border-radius: var(--radius-sm);
+    border-left: 2px solid var(--border);
+  }
+
+  /* ── SECTION INTRO ── */
+  .section-intro {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    margin-bottom: 22px;
+    font-weight: 300;
+    line-height: 1.7;
+    padding: 14px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+  }
+
+  /* ── SCROLL TO TOP ── */
+  .back-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,.2);
+    opacity: 0;
+    transition: opacity .25s, transform .25s;
+    transform: translateY(8px);
+    z-index: 99;
+  }
+  .back-top.show { opacity: 1; transform: translateY(0); }
+
+  /* ── AUDIO PILL STYLES ── */
+  .pill {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  .pill::after {
+    content: '🔊';
+    font-size: 9px;
+    opacity: 0;
+    margin-left: 4px;
+    transition: opacity .15s;
+    vertical-align: middle;
+  }
+  .pill:hover::after {
+    opacity: 0.6;
+  }
+  .pill.speaking {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  /* ── IPA TOOLTIP ── */
+  .pill[data-ipa]:hover .ipa-tip,
+  .pill[data-ipa]:focus .ipa-tip {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: none;
+  }
+  .ipa-tip {
+    position: absolute;
+    bottom: calc(100% + 7px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: #1C1A17;
+    color: #F7F5F0;
+    font-family: 'DM Sans', monospace;
+    font-size: 11.5px;
+    font-weight: 400;
+    padding: 4px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity .18s ease, transform .18s ease;
+    pointer-events: none;
+    z-index: 100;
+    letter-spacing: .02em;
+  }
+  .ipa-tip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #1C1A17;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 560px) {
+    .page-wrap { padding: 28px 16px 60px; }
+    .tab-btn { padding: 8px 14px; font-size: 12.5px; }
+    .cat-badge { display: none; }
+    .category-card { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-wrap">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-eyebrow">TOEIC Speaking &middot; Questions 1–2: Read a text aloud</div>
+    <h1 class="header-title">Words<br><em>Phrases</em></h1>
+    <p class="header-sub">Phân loại từ &amp; cụm từ theo Text Types · Topics · Functional Phrases — tổng hợp từ nhiều bộ mock test</p>
+    <div class="header-divider"></div>
+  </header>
+
+  <!-- TABS -->
+  <nav class="tab-nav" role="tablist">
+    <button class="tab-btn active" onclick="show('tt',this)" role="tab">Text Types</button>
+    <button class="tab-btn" onclick="show('tp',this)" role="tab">Topics</button>
+    <button class="tab-btn" onclick="show('fp',this)" role="tab">Functional Phrases</button>
+  </nav>
+
+  <!-- ══════════════ TEXT TYPES ══════════════ -->
+  <div class="section active" id="tt">
+
+    <!-- Announcements -->
+    <div class="category-card">
+      <div class="cat-header">
+        <div class="cat-dot" style="background:#534AB7"></div>
+        <span class="cat-title">Announcements — Thông báo</span>
+        <span class="cat-badge" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">Công cộng / Nơi làm việc</span>
+      </div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">good morning / afternoon / evening</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">ladies and gentlemen</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">please note that</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">make sure to</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">the grand opening</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">retirement / opening ceremony</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">today</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">unfortunately</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">this is</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">please</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">renovation</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">will be available for viewing on</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">please be ready to</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">brand new</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">we would like to request</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">turned off / switched off</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">we will notify you</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">duration</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">interfere with</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">equipment</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">safety precautions</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">vigilant</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">unplug / shut down</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">prevent / prevention</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">due to time constraints</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">hold your questions until the end</span>
+      </div>
+    </div>
+
+    <!-- Advertisements -->
+    <div class="category-card">
+      <div class="cat-header">
+        <div class="cat-dot" style="background:#D85A30"></div>
+        <span class="cat-title">Advertisements — Quảng cáo</span>
+        <span class="cat-badge" style="background:#FAECE7;color:#712B13;border-color:#F0997B">Radio / TV / Online / Tạp chí</span>
+      </div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">advertisement / advertising</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">are you looking for...?</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">are you tired of...?</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">do you want to...?</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">we are offering...</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">discount / coupon / voucher / reward</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">to take advantage of...</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">visit our website / store</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">call us now</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">from our sponsors</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">online / free sample</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">special</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">deal</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">located on / in / at</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">including / excluding</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">reservation</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">wide selection</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">in stock / out of stock</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">we look forward to hearing from you</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">come be a part of...</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">we are sure you'll find...</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">available in most major supermarkets</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">patented formula</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">organically based / free of dyes</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">safe and gentle</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">we guarantee</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">stainless steel / appliance</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">a fraction of the time</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">limited time offer</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">conveniently located</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">free parking</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">prides itself on</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">spacious rooms / outdoor activities</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">spectacular sights</span>
+      </div>
+    </div>
+
+    <!-- Introductions -->
+    <div class="category-card">
+      <div class="cat-header">
+        <div class="cat-dot" style="background:#0F6E56"></div>
+        <span class="cat-title">Introductions — Giới thiệu</span>
+        <span class="cat-badge" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">Sự kiện / Talk show / Hội thảo</span>
+      </div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">welcome to...</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">I'm your host</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">It is my honor to...</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">I am thrilled to...</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">please welcome...to join us / to the stage</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">let's welcome / greet...</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">without further ado</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">introduce</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">a big round of applause</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">professor / doctor (dr.)</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">journalist / author / specialist</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">congratulations</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">ladies and gentlemen</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">titled</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">guests</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">we are sad to see... / we wish him well</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">our speaker tonight is...</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">who has just returned from...</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">well known around the world</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">featured in newspapers / magazines / books</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">his/her work focuses on</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">my talk this morning focuses on</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">award / awards ceremony</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">certified public accountant / consultant</span>
+      </div>
+    </div>
+
+    <!-- News Reports -->
+    <div class="category-card">
+      <div class="cat-header">
+        <div class="cat-dot" style="background:#185FA5"></div>
+        <span class="cat-title">News Reports — Tin tức</span>
+        <span class="cat-badge" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">Báo / Đài phát thanh</span>
+      </div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">report</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">today</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">currently</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">recently</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">significant</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">impact</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">national / international</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">all over the world</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">various</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">community</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">organization</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">progress</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">industry</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">cooperation</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">achievement</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">endangered species</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">wildlife / conservation</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">legislation / regulation</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">annual sales / revenue</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">latest release</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">retailer / supermarket</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">they say that...</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">depends on</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">for this reason</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">organisms / species / survival</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">threats / destruction / illegal hunting</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">added to the list</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">pared back / lowered / widened</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">accounted for / up from</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">economic growth / economic times</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">bold / fortune favors the bold</span>
+      </div>
+    </div>
+
+    <!-- Phone Messages -->
+    <div class="category-card">
+      <div class="cat-header">
+        <div class="cat-dot" style="background:#BA7517"></div>
+        <span class="cat-title">Phone Messages — Tin nhắn thoại</span>
+        <span class="cat-badge" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">Voicemail / Hotline</span>
+      </div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">leave a message</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">press [button]</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">we will get back to you</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">thank you for / thanks for</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">as soon as possible</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">for more details</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">appointment</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">contact</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">schedule</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">prefer / preferred</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">apologize</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">hope / wish</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">hold</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">clinic</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">e-mail [name] with any questions</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">this is [name] calling from...</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">I'm calling about...</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">please call me at / my number is</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">I can't miss my [flight / appointment]</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">could you please...</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">I really need you to...</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">I noticed [it] was missing</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">retraced my route</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">I'd like to confirm</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">I was hoping you could...</span>
+      </div>
+    </div>
+
+    <p class="section-note">* Một số từ có thể xuất hiện ở nhiều text type — hãy dựa vào ngữ cảnh tổng thể để xác định dạng bài.</p>
+  </div>
+
+  <!-- ══════════════ TOPICS ══════════════ -->
+  <div class="section" id="tp">
+
+    <!-- Office -->
+    <div class="category-card">
+      <div class="cat-header">
+        <div class="cat-dot square" style="background:#534AB7"></div>
+        <span class="cat-title">Office Issues — Văn phòng</span>
+      </div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">meeting</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">conference</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">retirement / opening ceremony</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">renovation</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">cleaning service</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">job fair</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">badge / registration / booths</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">representative</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">coordination / cooperation</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">schedule / appointment</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">interview</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">design / update / program</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">progress / achievement</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">organization / industry</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">daily / weekly / monthly / annually</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">currently / recently</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">transfer / promotion / assignment</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">accounting / finance / marketing / R&amp;D</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">personnel manager</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">efficient / efficiency</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">innovative / dynamic</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">candidates / apply</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">self-motivated / adaptable / hard working</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">awards ceremony</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">certified public accountant / consultant</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">registration fee</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">seminar / workshop</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">financing / planning for profit</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">sales technique</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">general discussion</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">double booked</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">family reunion</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">suit up</span>
+      </div>
+    </div>
+
+    <!-- News -->
+    <div class="category-card">
+      <div class="cat-header">
+        <div class="cat-dot square" style="background:#185FA5"></div>
+        <span class="cat-title">News — Tin tức thời sự</span>
+      </div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">report</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">significant / impact</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">national / international</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">all over / all around the world</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">currently / recently</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">various / community</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">debate / discuss</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">journalist / author / specialist</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">press</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">unfortunately</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">cooperation / organization</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">latest release</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">legislation / regulation</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">endangered species / wildlife</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">annual sales / revenue</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">retailer / supermarket</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">economic growth / economic times</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">protection / conservation</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">threatened / destroyed / affected</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">quitting / resigning</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">freedom / opportunity</span>
+      </div>
+    </div>
+
+    <!-- Cultural Events -->
+    <div class="category-card">
+      <div class="cat-header">
+        <div class="cat-dot square" style="background:#D4537E"></div>
+        <span class="cat-title">Cultural Events — Sự kiện văn hóa</span>
+      </div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">festival</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">community</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">theater / museum</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">anniversary / celebrate</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">photography / photographer</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">athlete / performance / event</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">a big round of applause</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">podcast / episode / channel / our show</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">radio listener</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">studio</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">authentic</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">meaningful / local</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">gather / participate</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">appreciation</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">oasis / precious</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">deep dive into...</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">architecture / architectural</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">outdoor jazz concert / nature program</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">visitor's center</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">explore on foot / by bike / on horseback</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">photographing scenes of small-town life</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">featured in numerous publications</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">answer any questions you may have</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">across the continent / around the world</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">subscription / magazine</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">fill out the application card</span>
+        <span class="pill" style="background:#FBEAF0;color:#72243E;border-color:#ED93B1">limited time offer</span>
+      </div>
+    </div>
+
+    <!-- Sales & Shopping -->
+    <div class="category-card">
+      <div class="cat-header">
+        <div class="cat-dot square" style="background:#D85A30"></div>
+        <span class="cat-title">Sales &amp; Shopping — Bán hàng / Mua sắm</span>
+      </div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">discount / coupon / voucher / reward</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">we are offering...</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">to take advantage of...</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">groceries / vegetable / ingredient</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">deal / order</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">special / excellent</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">located on / in / at</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">reservation</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">throughout</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">plenty of / incredible</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">grand opening</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">wide selection</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">aisles / shelves</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">retailer / supermarket / discount store</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">in stock / order it for you</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">consumer / local businesses</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">annual sales / accounted for</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">shopping experience more appealing</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">conveniently located / free parking</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">major bus lines</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">clothes / shoes / books / sports equipment / furniture</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">one hundred stores on three levels</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">recipe book / we guarantee</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">stainless steel appliance</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">hard earned money</span>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="category-card">
+      <div class="cat-header">
+        <div class="cat-dot square" style="background:#3B6D11"></div>
+        <span class="cat-title">Education — Giáo dục</span>
+      </div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">library</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">professor / doctor (dr.)</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">program / routine</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">coach / workout</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">debate / discuss</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">clinic</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">participate / involve</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">achieve / achievement</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">share with us</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">improve / improve skills</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">subscribe / channel</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">gear up / ready / prepare</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">economics / psychology / international law</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">scientific / technical journals</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">keep abreast of...</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">hard working / self-motivated</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">cover a variety of topic areas</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">important research</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">seminar / workshop</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">diploma program</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">business computing courses</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">registration fee / members</span>
+      </div>
+    </div>
+
+    <!-- Transportation -->
+    <div class="category-card">
+      <div class="cat-header">
+        <div class="cat-dot square" style="background:#854F0B"></div>
+        <span class="cat-title">Transportation — Giao thông</span>
+      </div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">traffic / rush hour / crash</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">direction / route</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">make a detour</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">tour guide</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">hop-on hop-off tour</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">feel free to board and disembark</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">flight</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">boulevard / area</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">luggage / belongings</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">coach</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">avoid</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">on foot / by bike / on horseback</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">departure / arrival gate</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">terminal / platform</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">mobile phones / electronic devices</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">turned off for the full duration of the flight</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">navigational / communication equipment</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">fly above 10,000 feet</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">emergency water landing</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">brace position</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">loudspeaker / passengers / captain</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">passport / carry-on bag / purse</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">international departure terminal</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">taxi / driver / license number</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">pack / suitcase / travel guides</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">heavier items / lightest items</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">major bus lines / free parking</span>
+      </div>
+    </div>
+
+    <!-- Weather -->
+    <div class="category-card">
+      <div class="cat-header">
+        <div class="cat-dot square" style="background:#1D9E75"></div>
+        <span class="cat-title">Weather — Thời tiết</span>
+      </div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">weather forecast</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">thunderstorm / rainstorm / heavy rain</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">temperature</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">degrees Fahrenheit / Celsius</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">warm / cold</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">sunlight / sunshine</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">wind</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">dehydration</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">sunscreen / apply sunscreen</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">stay hydrated</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">humidity</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">chance of rain</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">partly cloudy / mostly sunny</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">umbrella / raincoat</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">heat advisory / cold front</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">make a detour (weather context)</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">clean country air</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">breathe fresh air</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">outdoor activities</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ FUNCTIONAL PHRASES ══════════════ -->
+  <div class="section" id="fp">
+    <p class="section-intro">Nhóm theo <strong>chức năng giao tiếp</strong> trong bài đọc — học theo nhóm để nhận diện nhanh cấu trúc và dự đoán text type ngay từ câu đầu tiên.</p>
+
+    <div class="category-card functional">
+      <div class="sub-label">Opening — Mở đầu bài</div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">welcome to...</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">good morning / afternoon / evening</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">ladies and gentlemen</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">this is [name] / this is [show name]</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">I'm your host</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">thanks for tuning into...</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">are you looking for...?</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">are you tired of...?</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">do you want to...?</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">get ready for... / are you ready for...?</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">if you are planning to...</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">if you can't find...</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">has your family ever been affected by...?</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">my talk this morning focuses on...</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;border-color:#AFA9EC">they say that...</span>
+      </div>
+    </div>
+
+    <div class="category-card functional">
+      <div class="sub-label">Introducing a Guest / Speaker — Giới thiệu khách mời</div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">It is my honor to (introduce)...</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">I am thrilled to...</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">without further ado</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">please welcome...to join us / to the stage</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">let's welcome / greet...</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">a big round of applause</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">joining us today is...</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">our speaker tonight is...</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">who has just returned from...</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">well known around the world</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">his/her work is featured in...</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">titled</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">talk about</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">share with us</span>
+        <span class="pill" style="background:#E1F5EE;color:#085041;border-color:#5DCAA5">here at [venue / organization]</span>
+      </div>
+    </div>
+
+    <div class="category-card functional">
+      <div class="sub-label">Providing Information — Cung cấp thông tin</div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">please note that</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">let's have a look at...</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">find out</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">deep dive into...</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">including / excluding</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">are going to / is going to</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">located on / in / at</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">throughout</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">provide</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">various / kinds of</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">daily / weekly / monthly / annually</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">all over / all around the world</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">they say that...</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">for this reason</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">not only... but also...</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">such as / including</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">in which case</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">as part of a program to</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">accounted for / up from / down from</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">however / although / while</span>
+      </div>
+    </div>
+
+    <div class="category-card functional">
+      <div class="sub-label">Call to Action — Kêu gọi hành động</div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">make sure to</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">please [verb]</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">call us now</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">visit our website / store</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">please click the link</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">subscribe</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">check</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">stay tuned</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">to take advantage of...</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">for more details</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">grab / put on / gear up</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">apply sunscreen / stay hydrated</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">invite</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">avoid</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">engage</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">e-mail [name] with any questions</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">we look forward to hearing from you</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">try [product] today!</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">stop [doing X] and get [Y] today</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">unplug all appliances / shut down</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">please be ready to change your office by then</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">hold your questions until the end</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">fill out the application card</span>
+        <span class="pill" style="background:#FAECE7;color:#712B13;border-color:#F0997B">mail the card and [amount] to the address provided</span>
+      </div>
+    </div>
+
+    <div class="category-card functional">
+      <div class="sub-label">Emphasis / Transition — Nhấn mạnh / Chuyển ý</div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">unfortunately</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">definitely / extremely</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">without a doubt</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">fantastic / incredible / excellent</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">significant / meaningful</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">special</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">famous / authentic</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">precious</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">however / although</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">not only... but also...</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">for the first time</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">undoubtedly</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">it is important that...</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">it is only when... that...</span>
+        <span class="pill" style="background:#FAEEDA;color:#633806;border-color:#EF9F27">either... or...</span>
+      </div>
+    </div>
+
+    <div class="category-card functional">
+      <div class="sub-label">Closing — Kết thúc bài</div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">thank you for / thanks for</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">congratulations</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">we will get back to you</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">as soon as possible</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">hope / wish</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">enjoy</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">celebrate</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">we are sad to see... / we wish you well</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">a vacation you won't forget</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">we apologize for any inconvenience</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">we apologize to passengers / guests</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;border-color:#97C459">bon voyage!</span>
+      </div>
+    </div>
+
+    <div class="category-card functional">
+      <div class="sub-label">Digital / Online Context</div>
+      <div class="pill-grid">
+        <span class="pill" style="background:#F1EFE8;color:#444441;border-color:#B4B2A9">www.abc.com</span>
+        <span class="pill" style="background:#F1EFE8;color:#444441;border-color:#B4B2A9">please click the link</span>
+        <span class="pill" style="background:#F1EFE8;color:#444441;border-color:#B4B2A9">please visit us at [website]</span>
+        <span class="pill" style="background:#F1EFE8;color:#444441;border-color:#B4B2A9">or e-mail us at [address]</span>
+        <span class="pill" style="background:#F1EFE8;color:#444441;border-color:#B4B2A9">subscribe</span>
+        <span class="pill" style="background:#F1EFE8;color:#444441;border-color:#B4B2A9">online / free sample</span>
+        <span class="pill" style="background:#F1EFE8;color:#444441;border-color:#B4B2A9">channel / episode</span>
+        <span class="pill" style="background:#F1EFE8;color:#444441;border-color:#B4B2A9">podcast</span>
+        <span class="pill" style="background:#F1EFE8;color:#444441;border-color:#B4B2A9">latest release</span>
+        <span class="pill" style="background:#F1EFE8;color:#444441;border-color:#B4B2A9">update</span>
+        <span class="pill" style="background:#F1EFE8;color:#444441;border-color:#B4B2A9">advertisement / Internet advertising company</span>
+        <span class="pill" style="background:#F1EFE8;color:#444441;border-color:#B4B2A9">connect with local businesses</span>
+      </div>
+    </div>
+
+  </div><!-- /section fp -->
+
+</div><!-- /page-wrap -->
+
+<!-- Scroll to top button -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+
+<script>
+  // ── TAB NAV ──
+  function show(id, el) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    el.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  const btn = document.getElementById('backTop');
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('show', window.scrollY > 300);
+  });
+
+  // ── IPA DATABASE (American English) ──
+  const IPA_MAP = {
+    // Single common words
+    "report": "/rɪˈpɔːrt/",
+    "today": "/təˈdeɪ/",
+    "currently": "/ˈkɜːrəntli/",
+    "recently": "/ˈriːsəntli/",
+    "significant": "/sɪɡˈnɪfɪkənt/",
+    "impact": "/ˈɪmpækt/",
+    "national": "/ˈnæʃənəl/",
+    "international": "/ˌɪntərˈnæʃənəl/",
+    "various": "/ˈvɛriəs/",
+    "community": "/kəˈmjuːnəti/",
+    "organization": "/ˌɔːrɡənɪˈzeɪʃən/",
+    "progress": "/ˈprɑːɡrɛs/",
+    "industry": "/ˈɪndəstri/",
+    "cooperation": "/koʊˌɑːpəˈreɪʃən/",
+    "achievement": "/əˈtʃiːvmənt/",
+    "legislation": "/ˌlɛdʒɪˈsleɪʃən/",
+    "regulation": "/ˌrɛɡjəˈleɪʃən/",
+    "conservation": "/ˌkɑːnsərˈveɪʃən/",
+    "advertisement": "/ˌædvərˈtaɪzmənt/",
+    "reservation": "/ˌrɛzərˈveɪʃən/",
+    "appointment": "/əˈpɔɪntmənt/",
+    "schedule": "/ˈskɛdʒuːl/",
+    "contact": "/ˈkɑːntækt/",
+    "apologize": "/əˈpɒlədʒaɪz/",
+    "subscribe": "/səbˈskraɪb/",
+    "renovation": "/ˌrɛnəˈveɪʃən/",
+    "equipment": "/ɪˈkwɪpmənt/",
+    "duration": "/djʊˈreɪʃən/",
+    "prevention": "/prɪˈvɛnʃən/",
+    "unfortunately": "/ʌnˈfɔːrtʃənətli/",
+    "definitely": "/ˈdɛfɪnətli/",
+    "extremely": "/ɪkˈstriːmli/",
+    "significant": "/sɪɡˈnɪfɪkənt/",
+    "fantastic": "/fænˈtæstɪk/",
+    "incredible": "/ɪnˈkrɛdɪbəl/",
+    "excellent": "/ˈɛksələnt/",
+    "meaningful": "/ˈmiːnɪŋfʊl/",
+    "precious": "/ˈprɛʃəs/",
+    "undoubtedly": "/ʌnˈdaʊtɪdli/",
+    "authentic": "/ɔːˈθɛntɪk/",
+    "famous": "/ˈfeɪməs/",
+    "special": "/ˈspɛʃəl/",
+    "provide": "/prəˈvaɪd/",
+    "throughout": "/θruːˈaʊt/",
+    "introduce": "/ˌɪntrəˈdjuːs/",
+    "congratulations": "/kənˌɡrætʃəˈleɪʃənz/",
+    "journalist": "/ˈdʒɜːrnəlɪst/",
+    "specialist": "/ˈspɛʃəlɪst/",
+    "professor": "/prəˈfɛsər/",
+    "certified": "/ˈsɜːrtɪfaɪd/",
+    "accountant": "/əˈkaʊntənt/",
+    "consultant": "/kənˈsʌltənt/",
+    "retailer": "/ˈriːteɪlər/",
+    "supermarket": "/ˈsuːpərˌmɑːrkɪt/",
+    "legislation": "/ˌlɛdʒɪˈsleɪʃən/",
+    "endangered": "/ɪnˈdeɪndʒərd/",
+    "wildlife": "/ˈwaɪldlaɪf/",
+    "organism": "/ˈɔːrɡənɪzəm/",
+    "survival": "/sərˈvaɪvəl/",
+    "destruction": "/dɪˈstrʌkʃən/",
+    "achievement": "/əˈtʃiːvmənt/",
+    "conveniently": "/kənˈviːniəntli/",
+    "reservation": "/ˌrɛzərˈveɪʃən/",
+    "guarantee": "/ˌɡærənˈtiː/",
+    "appliance": "/əˈplaɪəns/",
+    "invite": "/ɪnˈvaɪt/",
+    "engage": "/ɪnˈɡeɪdʒ/",
+    "avoid": "/əˈvɔɪd/",
+    "celebrate": "/ˈsɛlɪbreɪt/",
+    "enjoy": "/ɪnˈdʒɔɪ/",
+    "podcast": "/ˈpɒdkæst/",
+    "update": "/ˈʌpdeɪt/",
+    "channel": "/ˈtʃænəl/",
+    "episode": "/ˈɛpɪsoʊd/",
+    "vigilant": "/ˈvɪdʒɪlənt/",
+    "interfere": "/ˌɪntərˈfɪər/",
+    "precaution": "/prɪˈkɔːʃən/",
+    "discount": "/ˈdɪskaʊnt/",
+    "coupon": "/ˈkuːpɒn/",
+    "voucher": "/ˈvaʊtʃər/",
+    "reward": "/rɪˈwɔːrd/",
+    "sponsor": "/ˈspɒnsər/",
+    "patented": "/ˈpeɪtəntɪd/",
+    "formula": "/ˈfɔːrmjʊlə/",
+    "organically": "/ɔːrˈɡænɪkli/",
+    "stainless": "/ˈsteɪnləs/",
+
+    // Phrases with IPA
+    "ladies and gentlemen": "/ˈleɪdiz ænd ˈdʒɛntəlmən/",
+    "please note that": "/pliːz noʊt ðæt/",
+    "make sure to": "/meɪk ʃʊr tə/",
+    "as soon as possible": "/æz suːn æz ˈpɒsɪbəl/",
+    "thank you for": "/θæŋk juː fər/",
+    "for more details": "/fər mɔːr ˈdiːteɪlz/",
+    "leave a message": "/liːv ə ˈmɛsɪdʒ/",
+    "we will get back to you": "/wiː wɪl ɡɛt bæk tə juː/",
+    "without further ado": "/wɪˈðaʊt ˈfɜːrðər əˈduː/",
+    "a big round of applause": "/ə bɪɡ raʊnd əv əˈplɔːz/",
+    "call us now": "/kɔːl ʌs naʊ/",
+    "stay tuned": "/steɪ tuːnd/",
+    "find out": "/faɪnd aʊt/",
+    "check": "/tʃɛk/",
+    "hold": "/hoʊld/",
+    "clinic": "/ˈklɪnɪk/",
+    "not only... but also...": "/nɒt ˈoʊnli ... bʌt ˈɔːlsoʊ/",
+    "for this reason": "/fər ðɪs ˈriːzən/",
+    "limited time offer": "/ˈlɪmɪtɪd taɪm ˈɒfər/",
+    "free parking": "/friː ˈpɑːrkɪŋ/",
+    "in stock": "/ɪn stɒk/",
+    "out of stock": "/aʊt əv stɒk/",
+    "brand new": "/brænd njuː/",
+    "grand opening": "/ɡrænd ˈoʊpənɪŋ/",
+    "bon voyage": "/bɒn vɔɪˈɑːʒ/",
+    "bon voyage!": "/bɒn vɔɪˈɑːʒ/",
+    "welcome to...": "/ˈwɛlkəm tə/",
+    "I'm your host": "/aɪm jɔːr hoʊst/",
+    "congratulations": "/kənˌɡrætʃəˈleɪʃənz/",
+    "titled": "/ˈtaɪtəld/",
+    "guests": "/ɡɛsts/",
+    "well known around the world": "/wɛl noʊn əˈraʊnd ðə wɜːrld/",
+    "introduce": "/ˌɪntrəˈdjuːs/",
+    "report": "/rɪˈpɔːrt/",
+    "economic growth": "/ˌiːkəˈnɒmɪk ɡroʊθ/",
+    "annual sales": "/ˈænjuəl seɪlz/",
+    "revenue": "/ˈrɛvənjuː/",
+    "we apologize for any inconvenience": "/wiː əˈpɒlədʒaɪz fər ˈɛni ˌɪnkənˈviːniəns/",
+    "please": "/pliːz/",
+    "today": "/təˈdeɪ/",
+    "this is": "/ðɪs ɪz/",
+    "however": "/haʊˈɛvər/",
+    "although": "/ɔːlˈðoʊ/",
+    "while": "/waɪl/",
+    "either... or...": "/ˈiːðər ... ɔːr/",
+    "such as": "/sʌtʃ æz/",
+    "in which case": "/ɪn wɪtʃ keɪs/",
+    "throughout": "/θruːˈaʊt/",
+    "provide": "/prəˈvaɪd/",
+    "daily": "/ˈdeɪli/",
+    "weekly": "/ˈwiːkli/",
+    "monthly": "/ˈmʌnθli/",
+    "annually": "/ˈænjuəli/",
+  };
+
+  // ── AUDIO: Web Speech API (US English) ──
+  let currentUtterance = null;
+
+  function speakText(text, pillEl) {
+    if (!window.speechSynthesis) return;
+
+    // Cancel any ongoing speech
+    window.speechSynthesis.cancel();
+
+    // Remove speaking class from all pills
+    document.querySelectorAll('.pill.speaking').forEach(p => p.classList.remove('speaking'));
+
+    // Clean text: remove slash annotations, brackets, ellipsis etc.
+    let clean = text
+      .replace(/\[.*?\]/g, '')
+      .replace(/\.\.\./g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    // Handle slash-separated items: read the first meaningful one
+    // e.g. "including / excluding" → "including, excluding"
+    clean = clean.replace(/\s*\/\s*/g, ', ');
+
+    const utterance = new SpeechSynthesisUtterance(clean);
+    utterance.lang = 'en-US';
+    utterance.rate = 0.88;
+    utterance.pitch = 1.0;
+    utterance.volume = 1.0;
+
+    // Prefer a high-quality US English voice
+    const voices = window.speechSynthesis.getVoices();
+    const preferred = [
+      'Google US English',
+      'Microsoft Aria Online (Natural) - English (United States)',
+      'Microsoft Guy Online (Natural) - English (United States)',
+      'Samantha',
+      'Alex',
+    ];
+    let chosen = null;
+    for (const name of preferred) {
+      chosen = voices.find(v => v.name === name);
+      if (chosen) break;
+    }
+    if (!chosen) {
+      chosen = voices.find(v => v.lang === 'en-US') ||
+               voices.find(v => v.lang.startsWith('en'));
+    }
+    if (chosen) utterance.voice = chosen;
+
+    pillEl.classList.add('speaking');
+    utterance.onend = () => pillEl.classList.remove('speaking');
+    utterance.onerror = () => pillEl.classList.remove('speaking');
+
+    currentUtterance = utterance;
+    window.speechSynthesis.speak(utterance);
+  }
+
+  // ── BUILD PILLS: add click-to-speak + IPA tooltip ──
+  function initPills() {
+    document.querySelectorAll('.pill').forEach(pill => {
+      const rawText = pill.textContent.trim();
+
+      // Look up IPA — try exact match, then lowercase
+      const ipa = IPA_MAP[rawText] || IPA_MAP[rawText.toLowerCase()];
+
+      // Inject IPA tooltip span
+      if (ipa) {
+        const tip = document.createElement('span');
+        tip.className = 'ipa-tip';
+        tip.textContent = ipa;
+        pill.style.position = 'relative';
+        pill.appendChild(tip);
+        pill.setAttribute('data-ipa', ipa);
+      }
+
+      // Click to speak
+      pill.style.cursor = 'pointer';
+      pill.addEventListener('click', (e) => {
+        e.stopPropagation();
+        speakText(rawText, pill);
+      });
+
+      // Keyboard accessibility
+      pill.setAttribute('tabindex', '0');
+      pill.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          speakText(rawText, pill);
+        }
+      });
+    });
+  }
+
+  // Wait for voices to load (Chrome loads them async)
+  if (window.speechSynthesis) {
+    if (window.speechSynthesis.getVoices().length > 0) {
+      initPills();
+    } else {
+      window.speechSynthesis.onvoiceschanged = initPills;
+    }
+  } else {
+    // Fallback: still init for IPA tooltips
+    initPills();
+  }
+</script>
+</body>
+</html>
